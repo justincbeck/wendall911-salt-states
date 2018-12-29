@@ -6,14 +6,14 @@
 <%namespace name="hosts" file="/includes/hosts.mako"/>\
 
 ${hosts.host_file(self.attr.machine_name, self.attr.domain, self.attr.ip_addr)}
-hostname ${self.attr.machine_name}${self.attr.domain}
-${repos.epel()}
+hostname ${self.attr.machine_name}.${self.attr.domain}
 
-yum install -y salt-master salt-minion git
+${repos.fedora()}
+dnf install -y salt-master salt-minion git
 
-${conf.saltmaster(self.attr.machine_name)}
+\${conf.saltmaster(self.attr.machine_name)}
 ${conf.saltminion()}
-${users.wendallc()}
+${users.jbeck()}
 ${users.saltmaster(self.attr.machine_name)}
 
 systemctl start salt-master

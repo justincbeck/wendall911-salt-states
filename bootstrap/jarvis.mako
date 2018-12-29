@@ -1,6 +1,6 @@
 <%inherit file="/includes/fedora_saltminion.mako" />\
 <%!
-machine_name = "mediapc"
+machine_name = "jarvis"
 domain = "localdomain"
-ip_addr = "10.1.10.100"
+ip_addr = "10.0.10.46"
 %>

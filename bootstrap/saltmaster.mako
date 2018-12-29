@@ -1,6 +1,6 @@
-<%inherit file="/includes/centos_amazon_saltmaster.mako" />\
+<%inherit file="/includes/fedora_saltmaster.mako" />\
 <%!
 machine_name = "saltmaster"
-domain = "83864.com"
-ip_addr = "104.236.162.153"
+domain = "localdomain"
+ip_addr = "10.0.10.60"
 %>
